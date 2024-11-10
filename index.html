@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Approval System</h1>
+        
+        <!-- Applicant Information -->
+        <div class="applicant-info">
+            <label for="applicant_id">Applicant ID:</label>
+            <input type="text" id="applicant_id" placeholder="Enter Applicant ID or Name">
+            <button onclick="loadApplicant()">Open</button>
+            
+            <div id="applicantDetails" style="display: none;">
+                <p>Name: <span id="applicant_name"></span></p>
+                <p>Age: <span id="applicant_age"></span></p>
+                <p>Income: <span id="applicant_income"></span></p>
+                <p>Credit Score: <span id="applicant_credit_score"></span></p>
+            </div>
+        </div>
+
+        <!-- Loan Modification Section -->
+        <div class="loan-modification">
+            <h2>Loan Modification</h2>
+            <label for="loan_amount">Loan Amount (INR):</label>
+            <input type="number" id="loan_amount">
+            
+            <label for="loan_term">Loan Term (months):</label>
+            <input type="number" id="loan_term">
+            
+            <label for="interest_rate">Interest Rate (%):</label>
+            <input type="number" id="interest_rate">
+            
+            <button onclick="calculatePayment()">Calculate Payment</button>
+        </div>
+
+        <!-- Payment Calculation Section -->
+        <div class="payment-calculation" id="paymentDetails" style="display: none;">
+            <h2>Payment Calculation</h2>
+            <p>Monthly Payment: Rs. <span id="monthly_payment"></span></p>
+            <p>Total Interest: Rs. <span id="total_interest"></span></p>
+            <p>Total Payment: Rs. <span id="total_payment"></span></p>
+        </div>
+
+        <div class="action-buttons">
+            <button id="acceptButton" onclick="acceptApplication()">Accept</button>
+            <button id="rejectButton" onclick="rejectApplication()">Reject</button>
+            <button id="modifyButton" onclick="modifyApplication()">Modify</button>
+        </div>    
+        
+    </div>
+
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

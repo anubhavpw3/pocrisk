@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.container {
+    width: 60%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* General button styling */
+button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Action buttons container styling */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+/* Specific styles for the Accept, Reject, and Modify buttons */
+#acceptButton, #rejectButton, #modifyButton {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#acceptButton {
+    background-color: #28a745; /* Green */
+}
+
+#rejectButton {
+    background-color: #dc3545; /* Red */
+}
+
+#modifyButton {
+    background-color: #007bff; /* Blue */
+}
+
+#acceptButton:hover {
+    background-color: #218838;
+}
+
+#rejectButton:hover {
+    background-color: #c82333;
+}
+
+#modifyButton:hover {
+    background-color: #0069d9;
+}
